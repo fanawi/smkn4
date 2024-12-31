@@ -1,7 +1,7 @@
 <template>
     <div class="hero">
         <img src="../assets/img/gerbangsmk.png" class="min-h-screen">
-        <div class="hero-overlay bg-opacity-60"></div>
+        <div class="hero-overlay carousel bg-opacity-60"></div>
         <div class="hero-content text-neutral-content text-center">
             <div class="max-w-md">
                 <h1 class="mb-5 text-4xl font-bold">Welcome to Website <br>SMK Negeri 4 Tasikmalaya</h1>
@@ -42,7 +42,7 @@
         <div class="hero-content flex">
             <div class="flex-cols">
                 <img src="../assets/img/KepalaSekolah.png" class="max-w-sm rounded-lg shadow-2xl" />
-                <div class="Text text-center font-bold bg-white text-black rounded-lg py-2 leading-3">
+                <div class="Text text-center font-bold bg-green-800 text-black rounded-lg py-2 leading-3">
                     <p class="tracking-wide text-2xl">Kurniawan, S.Pd., M.Pd.</p>
                     <p class="tracking-wide text-lg">Kepala Sekolah</p>
                 </div>

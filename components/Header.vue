@@ -6,7 +6,7 @@
         <div class="flex items-center space-x-2">
           <img src="../assets/img/Logo.png" alt="Logo" class="h-[80px]" />
           <div class="">
-            <h1 class="text-3xl font-bold text-black ">SMK Negeri 4 Tasikmalaya</h1>
+            <h1 class="text-3xl font-bold text-black ">SMKN 4 Tasikmalaya</h1>
             <address> Jl. Depok Sukamenak, Purbaratu,Tasikmalaya, Jawa Barat, Indonesia</address>
           </div>
         </div>

@@ -10,7 +10,7 @@
           <div class="">
             <NuxtLink to="../">
               <h1 class="text-3xl font-bold text-black">SMKN 4 Tasikmalaya</h1>
-              <address> Jl. Depok Sukamenak, Purbaratu,Tasikmalaya, Jawa Barat, Indonesia</address>
+              <address> Jl. Depok Sukamenak, Purbaratu, Tasikmalaya, Jawa Barat</address>
             </NuxtLink>
           </div>
 
@@ -21,7 +21,7 @@
           </NuxtLink>
           <div class="Profile relative inline-block group cursor-pointer">
             <div class="OnHover group flex items-center">
-              <p class="">Profil Sekolah</p>
+              <p class="">Profil</p>
               <Icon name="material-symbols:keyboard-arrow-down-rounded" class="group-hover:rotate-180" />
             </div>
             <div
@@ -37,7 +37,7 @@
                   <NuxtLink to="../identitas">Identitas Sekolah</NuxtLink>
                 </li>
                 <li class="hover:bg-slate-100 p-2">
-                  <NuxtLink to="../gurustaff">Guru dan Staff</NuxtLink>
+                  <NuxtLink to="../guru">Guru dan Staff</NuxtLink>
                 </li>
                 <li class="hover:bg-slate-100 p-2">
                   <NuxtLink to="../datastatistik">Data Statistik</NuxtLink>

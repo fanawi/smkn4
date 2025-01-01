@@ -21,12 +21,12 @@
                         class="hover:text-[#2c52b3]">info@smkn4-tsm.sch.id</a>
                 </div>
             </nav>
-            <nav class="text-white">   
+            <nav class="text-white">
                 <h6 class="footer-title text-lg">Link eksternal</h6>
-                <a  href="https://www.kemdikbud.go.id/" class="link link-hover">Kemendikbud</a>
-                <a  href="https://dapo.dikdasmen.kemdikbud.go.id/" class="link link-hover">Dapodikdasmen</a>
-                <a  href="https://psmk.kemdikbud.go.id/" class="link link-hover">PSMK</a>
-                <a  href="https://disdik.jabarprov.go.id/" class="link link-hover">Disdik Jabar</a>
+                <a href="https://www.kemdikbud.go.id/" class="link link-hover">Kemendikbud</a>
+                <a href="https://dapo.dikdasmen.kemdikbud.go.id/" class="link link-hover">Dapodikdasmen</a>
+                <a href="https://psmk.kemdikbud.go.id/" class="link link-hover">PSMK</a>
+                <a href="https://disdik.jabarprov.go.id/" class="link link-hover">Disdik Jabar</a>
             </nav>
         </footer>
         <footer class="footer bg-base-300 text-base-content border-base-300 border-t items-center paddingX">

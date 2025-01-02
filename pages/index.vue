@@ -1,5 +1,5 @@
 <template>
-    <div class=" carousel w-full z-20 relative">
+    <div class="carousel w-full h-full z-20 relative">
         <!-- Carousel Items -->
         <div v-for="(item, index) in items" :key="index"
             :class="['carousel-item w-full', { 'active': currentSlide === index }]"
@@ -30,7 +30,7 @@
         </button>
     </div>
 
-    <div class="hero bg-base-300 min-h-screen text-white">
+    <div class="hero bg-blue-900 min-h-screen text-white">
         <div class="hero-content">
             <div class="flex-cols">
                 <img src="../assets/img/kepsek.png" class="max-w-sm rounded-lg shadow-2xl" />
@@ -63,7 +63,7 @@
         </div>
     </div>
 
-    <div class="hero  min-h-screen text-white">
+    <div class="hero min-h-screen text-black">
         <div class="hero-content flex-col lg:flex-row-reverse">
             <img src="../assets/img/d.jpg " class="max-w-sm rounded-lg shadow-2xl" />
             <div>
@@ -76,11 +76,99 @@
                     Purbaratu Kota Tasikmalaya mengusulkan kepada pemerintah Kota Tasikmalaya dan Pemerintah Provinsi
                     Jawa Barat, agar berdirinya SMK Negeri di Kecamatan Purbaratu Kota Tasikmalaya.
                 </p>
-                <button class="btn btn-outline btn-success">
-                    <NuxtLink to="../sejarah">
-                        <p class="">Selengkapnya ...</p>
-                    </NuxtLink>
-                </button>
+                <NuxtLink to="../sejarah">
+                    <button class="btn bg-[#eee]">
+                        <p class="">Lihat Selengkapnya</p>
+                    </button>
+                </NuxtLink>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto p-4">
+        <div class="card bg-base-100 shadow-xl">
+            <!-- Judul -->
+            <div class="bg-gray-100 py-4 text-center border-b">
+                <h1 class="text-xl font-bold">Statistik Data</h1>
+            </div>
+
+            <!-- Grid Statistik -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-6 bg-base-100">
+                <!-- Jumlah Siswa -->
+                <div class="card bg-blue-100 shadow p-4">
+                    <div class="text-center">
+                        <h2 class="text-lg font-semibold">Jumlah Siswa</h2>
+                        <p class="text-4xl font-bold">{{ jumlahSiswa }}</p>
+                    </div>
+                </div>
+
+                <!-- Jumlah Rombel -->
+                <div class="card bg-blue-100 shadow p-4">
+                    <div class="text-center">
+                        <h2 class="text-lg font-semibold">Jumlah Rombel</h2>
+                        <p class="text-4xl font-bold">{{ jumlahRombel }}</p>
+                    </div>
+                </div>
+
+                <!-- Jumlah Guru -->
+                <div class="card bg-blue-100 shadow p-4">
+                    <div class="text-center">
+                        <h2 class="text-lg font-semibold">Jumlah Guru</h2>
+                        <p class="text-4xl font-bold">{{ jumlahGuru }}</p>
+                    </div>
+                </div>
+
+                <!-- Jumlah Tenaga Administrasi -->
+                <div class="card bg-blue-100 shadow p-4">
+                    <div class="text-center">
+                        <h2 class="text-lg font-semibold">Jumlah Tenaga Administrasi</h2>
+                        <p class="text-4xl font-bold">{{ jumlahTenagaAdministrasi }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mb-2">
+                <NuxtLink to="../datastatistik">
+                    <button class="btn text-center flex">Selengkapnya...</button>
+                </NuxtLink>
+            </div>
+        </div>
+        <div class="min-h-screen bg-white text-black">
+            <div class="container mx-auto py-10">
+                <h1 class="text-3xl font-bold text-center mb-5">Daftar Guru SMKN 4 Tasikmalaya</h1>
+                <h2 class="text-xl text-center mb-10">Tahun Ajaran 2024/2025</h2>
+
+                <div class="flex items-center justify-center space-x-5">
+                    <!-- Tombol Kiri -->
+                    <button class="btn btn-circle" @click="prevCards" :disabled="currentIndex === 0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+
+                    <!-- Daftar Kartu -->
+                    <div class="flex space-x-5">
+                        <div v-for="(teacher, index) in visibleTeachers" :key="index"
+                            class="card w-60 bg-base-100 shadow-xl">
+                            <figure class="px-10 pt-10">
+                                <img :src="teacher.image" alt="Guru Image"
+                                    class="rounded-xl w-full h-48 object-cover" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <h2 class="card-title">{{ teacher.name }}</h2>
+                                <p>{{ teacher.subject }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tombol Kanan -->
+                    <button class="btn btn-circle" @click="nextCards"
+                        :disabled="currentIndex >= teacherList.length - 3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -91,7 +179,78 @@ import images1 from '../assets/img/gerbangsmk.png';
 // import images4 from '../assets/img/TP.jpg';
 // import images5 from '../assets/img/pbo.png';
 import images6 from '../assets/img/lampu.jpg';
-import images7 from '../assets/img/ruangkelas1.jpg'
+import images7 from '../assets/img/ruangkelas1.jpg';
+
+
+// Data untuk statistik
+const jumlahSiswa = 1116;
+const jumlahRombel = 34;
+const jumlahGuru = 60;
+const jumlahTenagaAdministrasi = 10;
+
+
+
+// Data guru
+const teacherList = [
+    {
+        name: 'Ibu Siti Aminah',
+        subject: 'Bahasa Indonesia',
+        image: 'https://via.placeholder.com/150',
+    },
+    {
+        name: 'Pak Budi Santoso',
+        subject: 'Matematika',
+        image: 'https://via.placeholder.com/150',
+    },
+    {
+        name: 'Ibu Rina Kurniawati',
+        subject: 'Fisika',
+        image: 'https://via.placeholder.com/150',
+    },
+    {
+        name: 'Pak Agus Supriatna',
+        subject: 'Teknik Komputer dan Jaringan',
+        image: 'https://via.placeholder.com/150',
+    },
+    {
+        name: 'Ibu Nurhayati',
+        subject: 'Kimia',
+        image: 'https://via.placeholder.com/150',
+    },
+    {
+        name: 'Pak Dedi Kusnadi',
+        subject: 'Biologi',
+        image: 'https://via.placeholder.com/150',
+    },
+    {
+        name: 'Ibu Tuti Handayani',
+        subject: 'Ekonomi',
+        image: 'https://via.placeholder.com/150',
+    },
+];
+
+// State untuk indeks saat ini
+import { ref, computed } from 'vue';
+const currentIndex = ref(0);
+
+// Menghitung guru yang terlihat
+const visibleTeachers = computed(() =>
+    teacherList.slice(currentIndex.value, currentIndex.value + 3)
+);
+
+// Fungsi navigasi
+const prevCards = () => {
+    if (currentIndex.value > 0) {
+        currentIndex.value -= 3;
+    }
+};
+
+const nextCards = () => {
+    if (currentIndex.value < teacherList.length - 3) {
+        currentIndex.value += 3;
+    }
+};
+
 
 const items = ref([
     { bg: images1, img: images1, title: 'Selamat Datang Di', description: 'SMK Negeri Tasikmalaya' },

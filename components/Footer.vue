@@ -1,5 +1,5 @@
 <template>
-    <div class=" bg-base-100 text-base-content">
+    <div class="bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500 text-white shadow-md">
         <footer class="footer paddingX">
             <nav>
                 <h6 class="footer-title text-lg text-white">Location</h6>
@@ -13,12 +13,12 @@
                 <div class="flex justify-center items-center gap-1 border-l-2 border-[#11224e] ps-5">
                     <Icon name="ion:ios-telephone" size="1.5rem" />
                     <a title="Nomor Telepon Sekolah" href="tel:+62265312059"
-                        class="hover:text-[#264595]">+62-265-312-059</a>
+                        class="hover:text-black link-hover">+62-265-312-059</a>
                 </div>
                 <div class="flex justify-center items-center gap-1 border-l-2 border-[#11224e] ps-5">
                     <Icon name="material-symbols:mail" size="1.5rem" />
                     <a title="Email Sekolah" href="info@smkn4-tsm.sch.id"
-                        class="hover:text-[#2c52b3]">info@smkn4-tsm.sch.id</a>
+                        class="hover:text-black link-hover">info@smkn4-tsm.sch.id</a>
                 </div>
             </nav>
             <nav class="text-white">
@@ -29,7 +29,7 @@
                 <a href="https://disdik.jabarprov.go.id/" class="link link-hover">Disdik Jabar</a>
             </nav>
         </footer>
-        <footer class="footer bg-base-300 text-base-content border-base-300 border-t items-center paddingX">
+        <footer class="footer text-white border-base-300 border-t-2 items-center paddingX">
             <aside class="grid-flow-col text-white">
                 <p>
                     © Copyright 2025 SMKN 4 TASIKMALAYA
@@ -39,8 +39,9 @@
                 <div class="grid grid-flow-col gap-5">
                     <div class="Alternatif flex items-center  border-[#11224e] ps-5 gap-5">
                         <div class="Sosmed flex items-center gap-5">
+                            <h6 class="footer-title">Media Social :</h6>
                             <a title="Facebook" href="https://www.facebook.com/4smkn"
-                                class="group rounded-full border border-[#264595] shadow-md w-10 h-10 flex justify-center items-center transition-all duration-150 hover:bg-[#3b5998]">
+                                class="group rounded-full border border-[#264595] shadow-md w-10 h-10 flex justify-center items-center transition-all duration-150 hover:bg-[#1d315b]">
                                 <Icon name="line-md:facebook" size="1.5rem" class="group-hover:text-white" />
                             </a>
                             <a title="Tiktok" href="https://www.tiktok.com/@smkn4tasikmalaya"
@@ -52,7 +53,7 @@
                                 <Icon name="mynaui:brand-youtube-solid" size="1.5rem" class="group-hover:text-white" />
                             </a>
                             <a title="Instagram" href="https://www.instagram.com/smkn4tasikmalaya/#"
-                                class="group rounded-full border border-[#264595] shadow-md w-10 h-10 flex justify-center items-center transition-all duration-150 hover:bg-[#f46f30]">
+                                class="group rounded-full border border-[#264595] shadow-md w-10 h-10 flex justify-center items-center transition-all duration-150 hover:bg-[#c3532a] ">
                                 <Icon name="hugeicons:instagram" size="1.5rem" class="group-hover:text-white" />
                             </a>
                             <a title="X" href="https://x.com/4smkn"
